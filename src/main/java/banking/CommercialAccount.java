@@ -3,24 +3,19 @@ package banking;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Account implementation for commercial (business) customers.<br><br>
- *
- * Private Variables:<br>
- * {@link #authorizedUsers}: List&lt;Person&gt;<br>
- */
-public class CommercialAccount  {
-	private List<Person> authorizedUsers;
+public class CommercialAccount  extends Account{
+	private List<Person> authorizedUsers = new ArrayList<>();
 
 	public CommercialAccount(Company company, Long accountNumber, int pin, double startingDeposit) {
-		// complete the function
+		super(company, accountNumber, pin, startingDeposit);
+		
 	}
 
 	/**
 	 * @param person The authorized user to add to the account.
 	 */
 	protected void addAuthorizedUser(Person person) {
-		// complete the function
+		authorizedUsers.add(person);
 	}
 
 	/**
